@@ -4,7 +4,7 @@ export default function Cover() {
   return (
     <section className="relative  w-full overflow-hidden bg-black">
       <div className="relative w-full">
-        <div style={{ height: "450px" }} />
+        <div className="h-30 md:h-760 xl:h-110 mb-1 mx-auto"  />
         <div className="absolute inset-0 bg-black/50 dark:bg-black/60" />
 
         <div className="absolute top-[50%] inset-x-0 z-10 px-4">
