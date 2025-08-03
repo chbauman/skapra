@@ -13,16 +13,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Skapra Zombie";
+const description = "Skapra Zombie, Ska Punk from Zürich";
+const baseUrl = "https://skaprazombie.ch";
+
 export const metadata: Metadata = {
-  title: "Skapra Zombie",
-  description: "Skapra Zombie, Ska Punk from Zürich",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: baseUrl,
+    siteName: title,
+    type: "website",
+    images: [
+      {
+        url: `${baseUrl}/logo_quadratisch.jpg`,
+        width: 630,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <Head>
