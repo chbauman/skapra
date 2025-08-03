@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://skaprazombie.ch
+
+# Sitemaps
+Sitemap: https://skaprazombie.ch/sitemap.xml
