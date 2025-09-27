@@ -2,7 +2,7 @@
 
 import Cover from "./cover";
 import Footer from "./footer";
-import { SectionHeading } from "./common";
+import { SectionHeading, VideoEmbed } from "./common";
 import { useAgenda } from "./agenda";
 
 export default function Home() {
@@ -21,31 +21,8 @@ export default function Home() {
       <Cover />
       <main className="flex-grow">
         <div className="max-w-5xl mx-auto px-4 mt-6">
-          <SectionHeading title="Punk'n'Ska im KuBaA" />
-          <p className="mb-3 text-gray-700 dark:text-gray-300 text-lg text-center">
-            Visit us at our next gig with{" "}
-            <a
-              href="https://www.instagram.com/nonchalant.band/"
-              aria-label="Email"
-              className="text-blue-600 hover:underline"
-            >
-              @nonchalant.band
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://www.instagram.com/nailemband/"
-              aria-label="Email"
-              className="text-blue-600 hover:underline"
-            >
-              @nailemband
-            </a>
-            {""}.
-          </p>
-          <img
-            src="/PunknSkaimKuBaA_01.png"
-            alt="Skapra Zombie Members"
-            className="mx-auto mb-6 w-80 md:w-120"
-          />
+          <VideoEmbed youtubeId="n2q1eTwwIfc" time={260} />
+
           <SectionHeading title="Music" />
           <p className="mb-3 text-gray-700 dark:text-gray-300 text-lg text-center">
             Listen to our music on BandCamp:
