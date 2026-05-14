@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Head from "next/head";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,22 +17,72 @@ const description = "Skapra Zombie, Ska Punk from Zürich";
 const baseUrl = "https://skaprazombie.ch";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title,
   description,
+  keywords: [
+    "Skapra Zombie",
+    "Ska Punk",
+    "Zürich",
+    "Ska",
+    "Punk",
+    "Band",
+    "Concert",
+    "Gig",
+    "Live Music",
+  ],
+  authors: [{ name: "Skapra Zombie" }],
   openGraph: {
     title,
     description,
     url: baseUrl,
     siteName: title,
     type: "website",
+    locale: "en_US",
     images: [
       {
-        url: `${baseUrl}/logo_quadratisch.jpg`,
+        url: "/logo_quadratisch.jpg",
         width: 630,
         height: 630,
+        alt: "Skapra Zombie",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/logo_quadratisch.jpg"],
+  },
+  icons: {
+    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "Skapra Zombie",
+  description:
+    "Skapra Zombie is a Ska Punk band from Zürich, Switzerland.",
+  url: baseUrl,
+  email: "skaprazombie@gmail.com",
+  genre: ["Ska", "Punk", "Ska Punk"],
+  location: {
+    "@type": "Place",
+    name: "Zürich",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Zürich",
+      addressCountry: "CH",
+    },
+  },
+  sameAs: ["https://www.instagram.com/skaprazombie/"],
 };
 
 export default function RootLayout({
@@ -41,29 +90,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
