@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bangers, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const bangers = Bangers({
+  variable: "--font-bangers",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -32,6 +33,9 @@ export const metadata: Metadata = {
     "Live Music",
   ],
   authors: [{ name: "Skapra Zombie" }],
+  alternates: {
+    canonical: baseUrl,
+  },
   openGraph: {
     title,
     description,
@@ -42,8 +46,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo_quadratisch.jpg",
-        width: 630,
-        height: 630,
+        width: 1080,
+        height: 1080,
         alt: "Skapra Zombie",
       },
     ],
@@ -90,9 +94,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${bangers.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
