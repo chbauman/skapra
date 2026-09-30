@@ -77,13 +77,19 @@ export default async function Home() {
 
           <AgendaProvider sheetId={SHEET_ID} initialData={agenda}>
             <SectionHeading title="Gigs" />
-            <FutureEvents />
+            <FutureEvents
+              surfaceClassName="bg-surface"
+              stripeClassName="odd:bg-surface-alt"
+            />
             <SectionHeading title="Band Members" />
             <section className="max-w-3xl mx-auto px-4 py-2 text-center">
               {bandPhoto}
             </section>
             <SectionHeading title="Past Gigs" />
-            <PastEvents />
+            <PastEvents
+              surfaceClassName="bg-surface"
+              stripeClassName="odd:bg-surface-alt"
+            />
           </AgendaProvider>
 
           <SectionHeading title="Contact" />
