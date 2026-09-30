@@ -14,6 +14,15 @@ export const coverProps: ComponentProps<typeof Cover> = {
 
 export const footerProps: ComponentProps<typeof Footer> = {
   copyrightName: "Skapra Zombie",
+  logoSrc: "/logo_transparent.png",
+  logoAlt: "Skapra Zombie Logo",
+  logoWidth: 60,
+  logoHeight: 60,
+  // The logo art is white-on-transparent; invert it to black in light mode
+  // so it's visible against the footer's light background, and back to
+  // white in dark mode.
+  logoClassName: "invert dark:invert-0",
+  surfaceClassName: "bg-surface",
   links: [
     { type: "email", href: "mailto:skaprazombie@gmail.com" },
     { type: "instagram", href: "https://www.instagram.com/skaprazombie/" },
