@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bangers, Inter } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "./navbar";
+import { NAV_ITEMS } from "./site-config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -117,6 +119,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Navbar siteName={bandName} items={NAV_ITEMS} />
         {children}
       </body>
     </html>
