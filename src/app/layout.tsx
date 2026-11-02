@@ -13,8 +13,10 @@ const bangers = Bangers({
   subsets: ["latin"],
 });
 
-const title = "Skapra Zombie";
-const description = "Skapra Zombie, Ska Punk from Zürich";
+const bandName = "Skapra Zombie";
+const title = `${bandName} – Ska Punk Band from Zürich`;
+const description =
+  "Skapra Zombie is a ska punk band from Zürich, Switzerland. Listen to our album Love and Petty Crimes, check our upcoming gigs and get in touch.";
 const baseUrl = "https://skaprazombie.ch";
 
 export const metadata: Metadata = {
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: baseUrl,
-    siteName: title,
+    siteName: bandName,
     type: "website",
     locale: "en_US",
     images: [
@@ -76,10 +78,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MusicGroup",
-  name: "Skapra Zombie",
+  name: bandName,
   description:
-    "Skapra Zombie is a Ska Punk band from Zürich, Switzerland.",
+    "Skapra Zombie is a ska punk band from Zürich, Switzerland.",
   url: baseUrl,
+  image: `${baseUrl}/logo_quadratisch.jpg`,
   email: "skaprazombie@gmail.com",
   genre: ["Ska", "Punk", "Ska Punk"],
   location: {
@@ -91,7 +94,16 @@ const jsonLd = {
       addressCountry: "CH",
     },
   },
-  sameAs: ["https://www.instagram.com/skaprazombie/"],
+  album: {
+    "@type": "MusicAlbum",
+    name: "Love and Petty Crimes",
+    url: "https://skaprazombie.bandcamp.com/album/love-and-petty-crimes",
+    byArtist: { "@type": "MusicGroup", name: bandName },
+  },
+  sameAs: [
+    "https://www.instagram.com/skaprazombie/",
+    "https://skaprazombie.bandcamp.com",
+  ],
 };
 
 export default function RootLayout({
