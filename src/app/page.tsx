@@ -62,7 +62,7 @@ export default async function Home() {
           </p>
           <div className="max-w-3xl mx-auto px-4 py-2 text-center">
             <iframe
-              title="track"
+              title="Love and Petty Crimes by Skapra Zombie"
               style={{
                 border: 0,
                 width: "100%",
@@ -70,9 +70,13 @@ export default async function Home() {
                 padding: 0,
                 margin: 0,
               }}
-              src="https://bandcamp.com/EmbeddedPlayer/size=large/album=2119557876/linkcol=0687f5/artwork=small/track=253287084/"
+              src="https://bandcamp.com/EmbeddedPlayer/album=788399799/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
               seamless
-            ></iframe>
+            >
+              <a href="https://skaprazombie.bandcamp.com/album/love-and-petty-crimes">
+                Love and Petty Crimes by Skapra Zombie
+              </a>
+            </iframe>
           </div>
 
           <AgendaProvider sheetId={SHEET_ID} initialData={agenda}>
