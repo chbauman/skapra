@@ -7,6 +7,7 @@ export const SHEET_ID =
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Booking", href: "/booking" },
 ];
 
 export const coverProps: ComponentProps<typeof Cover> = {

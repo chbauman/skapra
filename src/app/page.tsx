@@ -124,6 +124,16 @@ export default async function Home() {
             </a>
             {""}.
           </p>
+          <p className="mb-3 text-gray-700 dark:text-gray-300 text-lg text-center">
+            Want to book us for your event? See our{" "}
+            <Link
+              href="/booking"
+              className="text-brand hover:text-brand-dark font-medium hover:underline"
+            >
+              booking page
+            </Link>
+            .
+          </p>
         </div>
       </main>
       <Footer {...footerProps} />

@@ -10,9 +10,11 @@
 - Location: Zürich, Switzerland
 - Music: https://skaprazombie.bandcamp.com (album: Love and Petty Crimes, https://skaprazombie.bandcamp.com/album/love-and-petty-crimes)
 - Instagram: https://www.instagram.com/skaprazombie/
-- Contact: skaprazombie@gmail.com
+- Contact and booking: skaprazombie@gmail.com
+- Events played: concerts and ska nights, festivals, support slots, themed nights (e.g. Halloween) and private parties such as weddings and birthdays
 
 ## Pages
 
 - [Home](https://skaprazombie.ch): music, upcoming and past gigs, band photo and contact.
 - [About](https://skaprazombie.ch/about): band description, founding year and band photo.
+- [Booking](https://skaprazombie.ch/booking): which events the band plays and how to book it.
