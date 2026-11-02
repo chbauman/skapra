@@ -83,6 +83,7 @@ const jsonLd = {
     "Skapra Zombie is a ska punk band from Zürich, Switzerland.",
   url: baseUrl,
   image: `${baseUrl}/logo_quadratisch.jpg`,
+  foundingDate: "2024",
   email: "skaprazombie@gmail.com",
   genre: ["Ska", "Punk", "Ska Punk"],
   location: {

@@ -4,6 +4,8 @@
 
 - Website: https://skaprazombie.ch
 - Genre: ska punk
+- Founded: 2024
+- Line-up: six members
 - Location: Zürich, Switzerland
 - Music: https://skaprazombie.bandcamp.com (album: Love and Petty Crimes, https://skaprazombie.bandcamp.com/album/love-and-petty-crimes)
 - Instagram: https://www.instagram.com/skaprazombie/
@@ -11,4 +13,5 @@
 
 ## Pages
 
-- [Home](https://skaprazombie.ch): music, upcoming and past gigs, band members and contact.
+- [Home](https://skaprazombie.ch): music, upcoming and past gigs, band photo and contact.
+- [About](https://skaprazombie.ch/about): band description, founding year and band photo.

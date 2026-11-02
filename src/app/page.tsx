@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import {
   AgendaProvider,
   Cover,
@@ -11,6 +11,7 @@ import {
   stripMarkdownLinks,
   toISODate,
 } from "@emeki/band-site-kit";
+import { BandPhoto } from "./band-photo";
 import { SHEET_ID, coverProps, footerProps } from "./site-config";
 
 export default async function Home() {
@@ -32,16 +33,6 @@ export default async function Home() {
       name: "Skapra Zombie",
     },
   }));
-
-  const bandPhoto = (
-    <Image
-      src="/bandfoto_skaprazombie.jpg"
-      alt="Skapra Zombie Bandmitglieder"
-      width={1600}
-      height={1336}
-      className="mx-auto mb-6 rounded-xl shadow-lg w-108 md:w-148 h-auto"
-    />
-  );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -95,7 +86,15 @@ export default async function Home() {
             />
             <SectionHeading title="Band Members" />
             <section className="max-w-3xl mx-auto px-4 py-2 text-center">
-              {bandPhoto}
+              <BandPhoto />
+              <p className="mb-6 text-gray-700 dark:text-gray-300 text-lg">
+                <Link
+                  href="/about"
+                  className="text-brand hover:text-brand-dark font-medium hover:underline"
+                >
+                  More about the band
+                </Link>
+              </p>
             </section>
             <SectionHeading title="Past Gigs" />
             <PastEvents
