@@ -50,12 +50,12 @@ export default async function Home() {
           <SectionHeading title="Music" />
           <p className="mb-3 text-gray-700 dark:text-gray-300 text-lg text-center">
             Skapra Zombie is a ska punk band from Zürich, Switzerland. Listen to
-            our album{" "}
+            our album Love and Petty Crimes on{" "}
             <a
-              href="https://skaprazombie.bandcamp.com/album/love-and-petty-crimes"
+              href="https://skaprazombie.bandcamp.com"
               className="text-brand hover:text-brand-dark font-medium hover:underline"
             >
-              Love and Petty Crimes on Bandcamp
+              Bandcamp
             </a>
             :
           </p>

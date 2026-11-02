@@ -119,7 +119,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Navbar siteName={bandName} items={NAV_ITEMS} />
+        <Navbar items={NAV_ITEMS} />
         {children}
       </body>
     </html>
