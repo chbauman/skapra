@@ -4,6 +4,12 @@ import { Cover, Footer } from "@emeki/band-site-kit";
 export const SHEET_ID =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSuB0nj51YoUGhSq5fmfVJa7DCKi_7_BmU_YJtYNtsvxdr7hljjMWDG2QqIk5MEP67PCIirklVxUohl/pub?output=csv";
 
+export const NAV_ITEMS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Booking", href: "/booking" },
+];
+
 export const coverProps: ComponentProps<typeof Cover> = {
   bandName: "Skapra Zombie",
   logoSrc: "/logo_quadratisch.jpg",

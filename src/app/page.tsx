@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import {
   AgendaProvider,
   Cover,
@@ -11,6 +11,7 @@ import {
   stripMarkdownLinks,
   toISODate,
 } from "@emeki/band-site-kit";
+import { BandPhoto } from "./band-photo";
 import { SHEET_ID, coverProps, footerProps } from "./site-config";
 
 export default async function Home() {
@@ -33,16 +34,6 @@ export default async function Home() {
     },
   }));
 
-  const bandPhoto = (
-    <Image
-      src="/bandfoto_skaprazombie.jpg"
-      alt="Skapra Zombie Bandmitglieder"
-      width={1600}
-      height={1336}
-      className="mx-auto mb-6 rounded-xl shadow-lg w-108 md:w-148 h-auto"
-    />
-  );
-
   return (
     <div className="min-h-screen flex flex-col">
       {eventsJsonLd.length > 0 && (
@@ -58,11 +49,20 @@ export default async function Home() {
 
           <SectionHeading title="Music" />
           <p className="mb-3 text-gray-700 dark:text-gray-300 text-lg text-center">
-            Listen to our music on BandCamp:
+            Skapra Zombie is a ska punk band from Zürich, Switzerland. We write
+            our own songs, and these are the first few we have published. Listen
+            to our album Love and Petty Crimes on{" "}
+            <a
+              href="https://skaprazombie.bandcamp.com"
+              className="text-brand hover:text-brand-dark font-medium hover:underline"
+            >
+              Bandcamp
+            </a>
+            :
           </p>
           <div className="max-w-3xl mx-auto px-4 py-2 text-center">
             <iframe
-              title="track"
+              title="Love and Petty Crimes by Skapra Zombie"
               style={{
                 border: 0,
                 width: "100%",
@@ -70,9 +70,13 @@ export default async function Home() {
                 padding: 0,
                 margin: 0,
               }}
-              src="https://bandcamp.com/EmbeddedPlayer/size=large/album=2119557876/linkcol=0687f5/artwork=small/track=253287084/"
+              src="https://bandcamp.com/EmbeddedPlayer/album=788399799/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
               seamless
-            ></iframe>
+            >
+              <a href="https://skaprazombie.bandcamp.com/album/love-and-petty-crimes">
+                Love and Petty Crimes by Skapra Zombie
+              </a>
+            </iframe>
           </div>
 
           <AgendaProvider sheetId={SHEET_ID} initialData={agenda}>
@@ -83,7 +87,15 @@ export default async function Home() {
             />
             <SectionHeading title="Band Members" />
             <section className="max-w-3xl mx-auto px-4 py-2 text-center">
-              {bandPhoto}
+              <BandPhoto />
+              <p className="mb-6 text-gray-700 dark:text-gray-300 text-lg">
+                <Link
+                  href="/about"
+                  className="text-brand hover:text-brand-dark font-medium hover:underline"
+                >
+                  More about the band
+                </Link>
+              </p>
             </section>
             <SectionHeading title="Past Gigs" />
             <PastEvents
@@ -111,6 +123,16 @@ export default async function Home() {
               skaprazombie@gmail.com
             </a>
             {""}.
+          </p>
+          <p className="mb-3 text-gray-700 dark:text-gray-300 text-lg text-center">
+            Want to book us for your event? See our{" "}
+            <Link
+              href="/booking"
+              className="text-brand hover:text-brand-dark font-medium hover:underline"
+            >
+              booking page
+            </Link>
+            .
           </p>
         </div>
       </main>
